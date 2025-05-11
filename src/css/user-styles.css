@@ -1,0 +1,52 @@
+/* Add these new styles for the top navigation */
+.navbar {
+    padding: 0.5rem 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+}
+
+.navbar-brand {
+    font-size: 1.25rem;
+    color: var(--primary-color) !important;
+}
+
+.nav-link {
+    position: relative;
+    padding: 0.5rem 1rem !important;
+    color: var(--dark-color) !important;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover, 
+.nav-link.active {
+    color: var(--primary-color) !important;
+}
+
+.nav-link.active:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--primary-color);
+}
+
+/* Adjust main content for top nav */
+.container-fluid {
+    padding-top: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        padding: 1rem 0;
+    }
+    
+    .nav-link.active:after {
+        display: none;
+    }
+    
+    .nav-link {
+        padding: 0.75rem 1rem !important;
+    }
+}
